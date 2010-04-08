@@ -211,7 +211,7 @@ module Pingfm
 
     # Failed response.
   	def status_fail(response)
-      if response.elements.include? 'rsp/message'
+      if response.elements['rsp/message']
         message = response.elements['rsp/message'].text
       else
         message = "Unknown error from Ping.fm"
